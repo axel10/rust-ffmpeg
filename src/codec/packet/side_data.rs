@@ -150,6 +150,8 @@ impl From<AVPacketSideDataType> for Type {
 
             #[cfg(feature = "ffmpeg_8_1")]
             AV_PKT_DATA_EXIF => Type::EXIF,
+            #[cfg(feature = "ffmpeg_8_1")]
+            _ => Type::EXIF,
         }
     }
 }

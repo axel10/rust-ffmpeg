@@ -154,6 +154,8 @@ impl From<AVFrameSideDataType> for Type {
 
             #[cfg(feature = "ffmpeg_8_1")]
             AV_FRAME_DATA_EXIF => Type::EXIF,
+            #[cfg(feature = "ffmpeg_8_1")]
+            _ => Type::EXIF,
         }
     }
 }
